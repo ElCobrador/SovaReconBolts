@@ -10,7 +10,9 @@ export class SiteDescriptionComponent implements OnInit {
 
   constructor() { }
 
-  @Input() Site: SiteDescription;
+  @Input()
+  get Site(): SiteDescription { return this.site }
+  set Site(Site: SiteDescription) { this.site = Site; }
 
   private site:SiteDescription;
 
