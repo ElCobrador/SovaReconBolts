@@ -1,22 +1,10 @@
-<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-  <ngb-panel title="Bind">
-    <ng-template ngbPanelContent>
-      <app-site-selection></app-site-selection>
-    </ng-template>
-  </ngb-panel>
-  <ngb-panel title="Haven">
-    <ng-template ngbPanelContent>
-      <app-site-selection></app-site-selection>
-    </ng-template>
-  </ngb-panel>
-  <ngb-panel title="Split">
-    <ng-template ngbPanelContent>
-      <app-site-selection></app-site-selection>
-    </ng-template>
-  </ngb-panel>
-  <ngb-panel title="Ascent">
-    <ng-template ngbPanelContent>
-      <app-site-selection></app-site-selection>
-    </ng-template>
-  </ngb-panel>
-</ngb-accordion>
+
+<div class="MapSelection">
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+      <ngb-panel *ngFor="let site of Sites" title="{{site.Name}}">
+        <ng-template ngbPanelContent>
+            <app-site-description [Site]="site.Description"></app-site-description>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+</div>

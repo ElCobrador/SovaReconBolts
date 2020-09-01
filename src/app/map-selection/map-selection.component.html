@@ -1,22 +1,7 @@
 <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-  <ngb-panel title="Bind">
+  <ngb-panel *ngFor="let map of Maps.values()" title="{{map.Name}}">
     <ng-template ngbPanelContent>
-      <app-site-selection></app-site-selection>
-    </ng-template>
-  </ngb-panel>
-  <ngb-panel title="Haven">
-    <ng-template ngbPanelContent>
-      <app-site-selection></app-site-selection>
-    </ng-template>
-  </ngb-panel>
-  <ngb-panel title="Split">
-    <ng-template ngbPanelContent>
-      <app-site-selection></app-site-selection>
-    </ng-template>
-  </ngb-panel>
-  <ngb-panel title="Ascent">
-    <ng-template ngbPanelContent>
-      <app-site-selection></app-site-selection>
+      <app-site-selection [Sites]="map.Sites"></app-site-selection>
     </ng-template>
   </ngb-panel>
 </ngb-accordion>

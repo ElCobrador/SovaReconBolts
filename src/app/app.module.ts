@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MapSelectionComponent } from './map-selection/map-selection.component';
 import { SiteSelectionComponent } from './site-selection/site-selection.component';
+import { ShotDescriptionComponent } from './shot-description/shot-description.component';
+import { SiteDescriptionComponent } from './site-description/site-description.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapSelectionComponent,
-    SiteSelectionComponent
+    SiteSelectionComponent,
+    ShotDescriptionComponent,
+    SiteDescriptionComponent
   ],
   imports: [
     BrowserModule,
