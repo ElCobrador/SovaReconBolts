@@ -1,6 +1,7 @@
 .row {
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
 }
 .column {
-  max-width: 33%;
+  width: 33.3%;
 }

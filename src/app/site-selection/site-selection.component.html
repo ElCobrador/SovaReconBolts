@@ -1,9 +1,11 @@
 
 <div class="MapSelection">
-    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-      <ngb-panel *ngFor="let site of Sites" title="{{site.Name}}">
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" bg-dark>
+      <ngb-panel ngbPanelHeader *ngFor="let site of Sites" title="{{site.Name}}">
         <ng-template ngbPanelContent>
+          <div class="AppSiteDescription">
             <app-site-description [Site]="site.Description"></app-site-description>
+          </div>
         </ng-template>
       </ngb-panel>
     </ngb-accordion>

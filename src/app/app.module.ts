@@ -9,18 +9,21 @@ import { SiteSelectionComponent } from './site-selection/site-selection.componen
 import { ShotDescriptionComponent } from './shot-description/shot-description.component';
 import { SiteDescriptionComponent } from './site-description/site-description.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
     MapSelectionComponent,
     SiteSelectionComponent,
     ShotDescriptionComponent,
-    SiteDescriptionComponent
+    SiteDescriptionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
