@@ -1,10 +1,22 @@
 
-<div class="MapSelection">
-    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" bg-dark>
-      <ngb-panel ngbPanelHeader *ngFor="let site of Sites" title="{{site.Name}}">
+<div class="SiteSelection">
+    <ngb-accordion [destroyOnHide]='false' activeIds="ngb-panel-0">
+      <ngb-panel *ngFor="let site of Sites">
+        <ng-template ngbPanelHeader>
+          <button ngbPanelToggle class="btn">
+            <div class="row accordion-header-Name">
+              <div class=" column">
+                {{site.Name}}
+              </div>
+              <div class="column">
+                More info
+              </div>
+            </div>
+            </button>
+        </ng-template>
         <ng-template ngbPanelContent>
           <div class="AppSiteDescription">
-            <app-site-description [Site]="site.Description"></app-site-description>
+              <app-site-description [Site]="site.Description"></app-site-description>
           </div>
         </ng-template>
       </ngb-panel>
